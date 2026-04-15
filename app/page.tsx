@@ -1,24 +1,26 @@
 import Link from "next/link";
 import { posts } from "@/lib/posts";
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
-    <main className="max-w-2xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8">My Blog</h1>
+    <section className="relative bg-gray-900 text-white min-h-screen flex items-start justify-center pt-5">
+      <div>
+        <h1 className="text-4xl font-bold">The DEV Blog</h1>
+        <p className="text-sm px-10">Get technical, Get Deep</p>
+      </div>
 
-      <ul className="space-y-4">
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link
-              href={`/posts/${post.slug}`}
-              className="text-xl text-blue-600 hover:underline"
-            >
-              {post.title}
-            </Link>
-            <p className="text-sm text-gray-500">{post.date}</p>
-          </li>
-        ))}
-      </ul>
-    </main>
+      <section></section>
+    </section>
   );
 }
