@@ -37,7 +37,9 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   className="border-gray-700 hover:bg-gray-800"
-                ></Button>
+                >
+                  <Link href={`/blog/${post.slug}`}>Read More</Link>
+                </Button>
               </div>
             </div>
           ))}
