@@ -26,7 +26,7 @@ export default function HomePage() {
             variant="outline"
             className="border-gray-700 hover:bg-gray-800"
           >
-            <Link href={"/dashboard"}></Link>
+            <Link href={"/dashboard"}>Dashboard</Link>
           </Button>
         </div>
       </section>
