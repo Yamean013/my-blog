@@ -19,7 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export function AreaChartComponent() {
+export default function AreaChartComponent() {
   const [viewType, setViewType] = useState<"daily" | "weekly">("daily");
 
   const getChartData = () => {
