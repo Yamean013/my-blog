@@ -20,6 +20,15 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold">The DEV Blog</h1>
           <p className="text-sm">Get technical, Get Deep</p>
         </div>
+        <div>
+          <Button
+            asChild
+            variant="outline"
+            className="border-gray-700 hover:bg-gray-800"
+          >
+            <Link href={"/dashboard"}></Link>
+          </Button>
+        </div>
       </section>
 
       <section className="h-screen justify-center pt-5">
