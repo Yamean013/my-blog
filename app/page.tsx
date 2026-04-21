@@ -15,12 +15,12 @@ import { Badge } from "@/components/ui/badge";
 export default function HomePage() {
   return (
     <main className="bg-gray-900 text-white">
-      <div className="flex">
+      <div>
         <span>Home</span>
         <span>About</span>
         <span>Contact</span>
       </div>
-      <section className="flex  flex-col items-start justify-center py-20">
+      <section className="flex flex-col justify-center py-20">
         <div className="text-center mx-auto">
           <h1 className="text-4xl font-bold">The DEV Blog</h1>
           <p className="text-sm">Get technical, Get Deep</p>
