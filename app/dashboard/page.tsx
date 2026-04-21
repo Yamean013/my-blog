@@ -1,91 +1,37 @@
-"use client";
+import { AppSidebar } from "@/components/app-sidebar"
+import { ChartAreaInteractive } from "@/components/chart-area-interactive"
+import { DataTable } from "@/components/data-table"
+import { SectionCards } from "@/components/section-cards"
+import { SiteHeader } from "@/components/site-header"
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 
-import { useState } from "react";
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  Tooltip,
-  XAxis,
-  YAxis,
-  ResponsiveContainer,
-} from "recharts";
-import { dailyView, weeklyView } from "@/lib/views";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import data from "./data.json"
 
-export default function AreaChartComponent() {
-  const [viewType, setViewType] = useState<"daily" | "weekly">("daily");
-
-  const getChartData = () => {
-    switch (viewType) {
-      case "daily":
-        return dailyView;
-      case "weekly":
-        return weeklyView;
-      default:
-        return dailyView;
-    }
-  };
-
-  const currentData = getChartData();
-
+export default function Page() {
   return (
-    <main className="bg-gray-900 text-white min-h-screen">
-      <div className="space-y-6">
-        <div className="flex items-center gap-3">
-          <label className="text-sm font-medium text-gray-300">View by:</label>
-          <Select
-            value={viewType}
-            onValueChange={(value) => setViewType(value as "daily" | "weekly")}
-          >
-            <SelectTrigger className="w-40 bg-gray-700 border-gray-600 text-white">
-              <SelectValue placeholder="Select view" />
-            </SelectTrigger>
-            <SelectContent className="bg-gray-700 border-gray-600">
-              <SelectItem value="daily" className="text-white">
-                Daily
-              </SelectItem>
-              <SelectItem value="weekly" className="text-white">
-                Weekly
-              </SelectItem>
-            </SelectContent>
-          </Select>
+    <SidebarProvider
+      style={
+        {
+          "--sidebar-width": "calc(var(--spacing) * 72)",
+          "--header-height": "calc(var(--spacing) * 12)",
+        } as React.CSSProperties
+      }
+    >
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <SiteHeader />
+        <div className="flex flex-1 flex-col">
+          <div className="@container/main flex flex-1 flex-col gap-2">
+            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+              <SectionCards />
+              <div className="px-4 lg:px-6">
+                <ChartAreaInteractive />
+              </div>
+              <DataTable data={data} />
+            </div>
+          </div>
         </div>
-
-        <ResponsiveContainer width="100%" height={400}>
-          <AreaChart data={currentData}>
-            <defs>
-              <linearGradient id="colorVisits" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-            <XAxis dataKey="label" stroke="#9ca3af" />
-            <YAxis stroke="#9ca3af" />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: "#111827",
-                border: "1px solid #374151",
-              }}
-              labelStyle={{ color: "#fff" }}
-            />
-            <Area
-              type="monotone"
-              dataKey="visits"
-              stroke="#3b82f6"
-              fillOpacity={1}
-              fill="url(#colorVisits)"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
-      </div>
-    </main>
-  );
+      </SidebarInset>
+    </SidebarProvider>
+  )
 }
