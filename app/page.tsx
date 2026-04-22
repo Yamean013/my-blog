@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { posts } from "@/lib/posts";
 import {
   Card,
@@ -52,6 +53,15 @@ export default function HomePage() {
         <div className="flex flex-col items-center w-full px-4">
           {posts.map((post) => (
             <div key={post.slug} className="mt-10 w-full max-w-2xl text-left">
+              <div className="shrink-0">
+                <Image
+                  src={post.url}
+                  alt="post.title"
+                  width={160}
+                  height={120}
+                  className="rounded-lg"
+                ></Image>
+              </div>
               <h2 className="text-2xl font-bold">{post.title}</h2>
               <p className="text-xl">{post.content}</p>
 
