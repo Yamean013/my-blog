@@ -12,14 +12,14 @@ export const posts: Post[] = [
     title: "Hello World",
     date: "2026-04-14",
     content: "This is my very first blog post. Welcome!",
-    url: "https://unsplash.com/photos/lines-of-html-codes-4hbJ-eymZ1o",
+    url: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     slug: "building-apps",
     title: "Building Apps",
     date: "2026-04-14",
     content: "A guide on building real world applications",
-    url: "https://unsplash.com/photos/a-laptop-computer-with-a-bunch-of-different-screens-on-top-of-it-XV2kGdTo9II",
+    url: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
