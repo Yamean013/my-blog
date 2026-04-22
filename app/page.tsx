@@ -56,7 +56,7 @@ export default function HomePage() {
               <div className="shrink-0">
                 <Image
                   src={post.url}
-                  alt="post.title"
+                  alt={post.title}
                   width={160}
                   height={120}
                   className="rounded-lg"
