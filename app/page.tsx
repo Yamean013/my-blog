@@ -52,14 +52,17 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col items-center w-full px-4">
           {posts.map((post) => (
-            <div key={post.slug} className="mt-10 w-full max-w-2xl text-left">
+            <div
+              key={post.slug}
+              className="flex gap-6 items-start mt-10 w-full max-w-2xl text-left"
+            >
               <div className="shrink-0">
                 <Image
                   src={post.url}
                   alt={post.title}
                   width={160}
                   height={120}
-                  className="rounded-lg"
+                  className="rounded-lg object-cover"
                 ></Image>
               </div>
               <h2 className="text-2xl font-bold">{post.title}</h2>
