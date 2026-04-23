@@ -62,7 +62,7 @@ export default function HomePage() {
             <Button
               asChild
               variant="outline"
-              className="border-gray-700 hover:bg-gray-800 hover:text-lg transition-all mt-5"
+              className="border-gray-700 hover:text-lg transition-all mt-5"
             >
               <Link href={"/dashboard"}>Dashboard</Link>
             </Button>
@@ -95,7 +95,7 @@ export default function HomePage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="border-gray-700 hover:bg-gray-800"
+                    className="border-gray-700 hover:text-lg"
                   >
                     <Link href={`/blog/${post.slug}`}>Read More</Link>
                   </Button>
