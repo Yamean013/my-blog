@@ -26,10 +26,10 @@ import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
-    <SidebarProvider className="bg-gray-900 text-white">
+    <SidebarProvider>
       <Sidebar>
         <SidebarHeader>
-          <h1 className="flex justify-center">Dev Blog</h1>
+          <h1 className="flex justify-center">The Dev Blog</h1>
         </SidebarHeader>
         <SidebarContent>
           <SidebarMenu>
@@ -51,7 +51,7 @@ export default function HomePage() {
           </SidebarMenu>
         </SidebarContent>
       </Sidebar>
-      <SidebarInset>
+      <SidebarInset className="text-black">
         <SidebarTrigger />
         <section className="flex flex-col justify-center py-20">
           <div className="text-center mx-auto">
@@ -62,7 +62,7 @@ export default function HomePage() {
             <Button
               asChild
               variant="outline"
-              className="border-gray-700 hover:bg-gray-800 hover:text-xl mt-5"
+              className="border-gray-700 hover:bg-gray-800 hover:text-lg transition-all mt-5"
             >
               <Link href={"/dashboard"}>Dashboard</Link>
             </Button>
