@@ -24,7 +24,7 @@ export default async function Blog({
   }
 
   return (
-    <main className="p-20 bg-gray-900 text-white min-h-screen">
+    <main className="text-black p-20 min-h-screen">
       <h1 className="text-4xl font-bold">{post.title}</h1>
       <p className="mt-10">{post.content}</p>
     </main>
