@@ -26,85 +26,58 @@ import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
-    <SidebarProvider>
-      <Sidebar>
-        <SidebarHeader>
-          <h1 className="flex justify-center">The Dev Blog</h1>
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href={"./"}>Home</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href={"./"}>About</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href={"./"}>Contact</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarContent>
-      </Sidebar>
-      <SidebarInset className="text-black">
-        <SidebarTrigger />
-        <section className="flex flex-col justify-center py-20">
-          <div className="text-center mx-auto">
-            <h1 className="text-4xl font-bold hover:text-slate-500">
-              The DEV Blog
-            </h1>
-            <p className="text-sm">Get technical, Get Deep</p>
-            <Button
-              asChild
-              variant="outline"
-              className="border-gray-700 hover:text-lg transition-all mt-5"
+    <main>
+      <section className="flex flex-col justify-center py-20">
+        <div className="text-center mx-auto">
+          <h1 className="text-4xl font-bold hover:text-slate-500">
+            The DEV Blog
+          </h1>
+          <p className="text-sm">Get technical, Get Deep</p>
+          <Button
+            asChild
+            variant="outline"
+            className="border-gray-700 hover:text-lg transition-all mt-5"
+          >
+            <Link href={"/dashboard"}>Dashboard</Link>
+          </Button>
+        </div>
+      </section>
+
+      <section className="h-screen justify-center pt-5">
+        <div className="text-center">
+          <h2 className="font-bold">Latest Posts</h2>
+        </div>
+        <div className="flex flex-col items-center w-full px-4">
+          {posts.map((post) => (
+            <div
+              key={post.slug}
+              className="flex gap-6 items-start mt-10 w-full max-w-2xl text-left"
             >
-              <Link href={"/dashboard"}>Dashboard</Link>
-            </Button>
-          </div>
-        </section>
-
-        <section className="h-screen justify-center pt-5">
-          <div className="text-center">
-            <h2 className="font-bold">Latest Posts</h2>
-          </div>
-          <div className="flex flex-col items-center w-full px-4">
-            {posts.map((post) => (
-              <div
-                key={post.slug}
-                className="flex gap-6 items-start mt-10 w-full max-w-2xl text-left"
-              >
-                <div className="shrink-0">
-                  <Image
-                    src={post.url}
-                    alt={post.title}
-                    width={160}
-                    height={120}
-                    className="rounded-lg object-cover"
-                  ></Image>
-                </div>
-                <h2 className="text-2xl font-bold">{post.title}</h2>
-                <p className="text-xl">{post.content}</p>
-
-                <div className="mt-6">
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-gray-700 hover:text-lg"
-                  >
-                    <Link href={`/blog/${post.slug}`}>Read More</Link>
-                  </Button>
-                </div>
+              <div className="shrink-0">
+                <Image
+                  src={post.url}
+                  alt={post.title}
+                  width={160}
+                  height={120}
+                  className="rounded-lg object-cover"
+                ></Image>
               </div>
-            ))}
-          </div>
-        </section>
-      </SidebarInset>
-    </SidebarProvider>
+              <h2 className="text-2xl font-bold">{post.title}</h2>
+              <p className="text-xl">{post.content}</p>
+
+              <div className="mt-6">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-gray-700 hover:text-lg"
+                >
+                  <Link href={`/blog/${post.slug}`}>Read More</Link>
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
