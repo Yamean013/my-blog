@@ -11,22 +11,48 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import {
-  Sidebar,
-  SidebarInset,
-  SidebarProvider,
-  SidebarContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarTrigger,
-  SidebarHeader,
-} from "@/components/ui/sidebar";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
     <main>
+      <div className="flex justify-end">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-xl">
+                Home
+              </NavigationMenuTrigger>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-xl">
+                About
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink>Company</NavigationMenuLink>
+                <NavigationMenuLink>Milestones</NavigationMenuLink>
+                <NavigationMenuLink>Careers</NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-xl">
+                Contact
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink>Link</NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
       <section className="flex flex-col justify-center py-20">
         <div className="text-center mx-auto">
           <h1 className="text-4xl font-bold hover:text-cyan-700">
