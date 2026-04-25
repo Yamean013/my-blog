@@ -47,7 +47,8 @@ export default function HomePage() {
                 Contact
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <NavigationMenuLink>Link</NavigationMenuLink>
+                <NavigationMenuLink>Find Us</NavigationMenuLink>
+                <NavigationMenuLink>Email Us</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
