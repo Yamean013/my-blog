@@ -17,20 +17,25 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
     <main>
-      <div className="flex justify-end">
+      <div className="flex justify-center cursor-pointer">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-xl">
+              <NavigationMenuLink
+                href="/"
+                className={cn(navigationMenuTriggerStyle(), "text-xl")}
+              >
                 Home
-              </NavigationMenuTrigger>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-xl">
