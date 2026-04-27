@@ -70,7 +70,7 @@ export default function HomePage() {
             variant="outline"
             className="border-gray-700 hover:text-lg transition-all mt-5"
           >
-            <Link href={"/dashboard"}>Dashboard</Link>
+            <Link href={"/admin/dashboard/page.tsx"}>Dashboard</Link>
           </Button>
         </div>
       </section>
