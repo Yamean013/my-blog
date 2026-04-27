@@ -26,7 +26,7 @@ import { Badge } from "@/components/ui/badge";
 export default function HomePage() {
   return (
     <main>
-      <div className="flex justify-center cursor-pointer">
+      <div className="flex justify-end cursor-pointer">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>

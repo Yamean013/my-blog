@@ -105,8 +105,9 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "absolute top-full left-auto isolate z-50 flex justify-center",
+        "absolute top-full left-0 isolate z-50 flex justify-center",
       )}
+      style={{ left: "var(--radix-navigation-menu-viewport-left)" }}
     >
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
