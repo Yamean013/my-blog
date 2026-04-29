@@ -53,8 +53,8 @@ const data = {
       icon: <ListIcon />,
     },
     {
-      title: "test",
-      url: "#",
+      title: "Posts",
+      url: "../posts/",
       icon: <ChartBarIcon />,
     },
     {
