@@ -44,7 +44,7 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/admin/dashboard",
       icon: <LayoutDashboardIcon />,
     },
     {
@@ -54,7 +54,7 @@ const data = {
     },
     {
       title: "Posts",
-      url: "../posts/",
+      url: "/admin/posts",
       icon: <ChartBarIcon />,
     },
     {
@@ -64,17 +64,17 @@ const data = {
     },
     {
       title: "Home",
-      url: "../",
+      url: "/",
       icon: <House />,
     },
     {
       title: "About",
-      url: "./",
+      url: "#",
       icon: <Info />,
     },
     {
       title: "Contact",
-      url: "./../../",
+      url: "#",
       icon: <PhoneForwarded />,
     },
   ],
