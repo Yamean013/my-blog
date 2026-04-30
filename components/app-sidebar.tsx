@@ -48,7 +48,7 @@ const data = {
       icon: <LayoutDashboardIcon />,
     },
     {
-      title: "Blog",
+      title: "Manage Blogs",
       url: "#",
       icon: <ListIcon />,
     },
