@@ -49,7 +49,7 @@ const data = {
     },
     {
       title: "Manage Blogs",
-      url: "#",
+      url: "/admin/manage-blogs",
       icon: <ListIcon />,
     },
     {
