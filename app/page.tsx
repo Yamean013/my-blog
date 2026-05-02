@@ -38,9 +38,11 @@ export default function HomePage() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-xl">
-                About
-              </NavigationMenuTrigger>
+              <NavigationMenuLink href="/about">
+                <NavigationMenuTrigger className="text-xl">
+                  About
+                </NavigationMenuTrigger>
+              </NavigationMenuLink>
               <NavigationMenuContent>
                 <NavigationMenuLink>Company</NavigationMenuLink>
                 <NavigationMenuLink>Milestones</NavigationMenuLink>
