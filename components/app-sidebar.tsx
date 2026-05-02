@@ -69,12 +69,12 @@ const data = {
     },
     {
       title: "About",
-      url: "#",
+      url: "/about",
       icon: <Info />,
     },
     {
       title: "Contact",
-      url: "#",
+      url: "/contact",
       icon: <PhoneForwarded />,
     },
   ],
