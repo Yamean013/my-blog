@@ -50,9 +50,11 @@ export default function HomePage() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-xl">
-                Contact
-              </NavigationMenuTrigger>
+              <NavigationMenuLink href="/contact">
+                <NavigationMenuTrigger className="text-xl">
+                  Contact
+                </NavigationMenuTrigger>
+              </NavigationMenuLink>
               <NavigationMenuContent>
                 <NavigationMenuLink>Find Us</NavigationMenuLink>
                 <NavigationMenuLink>Email Us</NavigationMenuLink>
