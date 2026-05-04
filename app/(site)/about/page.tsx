@@ -18,7 +18,7 @@ export default function About() {
         </h1>
       </div>
       <div className="animate-slide-up opacity-0">
-        <p className="bg-gradient-to-r from-black via-cyan-700 to-black bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer text-2xl font-semibold">
+        <p className="bg-gradient-to-r from-black via-cyan-700 to-black bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer text-2xl text-center font-semibold flex items-center justify-center min-h-screen">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo
           sapien, gravida a magna non, vestibulum posuere justo. Suspendisse
           potenti. Aliquam sed lacus consectetur metus commodo hendrerit. Mauris
