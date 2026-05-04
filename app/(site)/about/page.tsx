@@ -41,6 +41,9 @@ export default function About() {
           elementum enim. Sed a commodo risus.
         </p>
       </div>
+      <div className="flex justify-center items-center min-h-screen">
+        <h2>Find us in the following locations</h2>
+      </div>
     </main>
   );
 }
