@@ -41,8 +41,33 @@ export default function About() {
           elementum enim. Sed a commodo risus.
         </p>
       </div>
-      <div className="flex justify-center items-center min-h-screen">
-        <h2>Find us in the following locations</h2>
+      <div className="flex justify-center items-center min-h-screen gap-8 px-3">
+        <h2 className="text-3xl font-bold text-center">
+          Find us in the following locations
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+          <div className="flex flex-col items-center text-center p-6 border rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <span className="text-3xl mb-3">📍</span>
+            <h3 className="font-semibold text-lg mb-2">Address</h3>
+            <p className="text-gray-600 text-sm">123 Knowledge Street</p>
+            <p className="text-gray-600 text-sm">Malé, Maldives</p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6 border rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <span className="text-3xl mb-3">📞</span>
+            <h3 className="font-semibold text-lg mb-2">Phone</h3>
+            <p className="text-gray-600 text-sm">+960 123 4567</p>
+            <p className="text-gray-600 text-sm">Mon–Fri, 9am–5pm</p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6 border rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <span className="text-3xl mb-3">✉️</span>
+            <h3 className="font-semibold text-lg mb-2">Email</h3>
+            <p className="text-gray-600 text-sm">hello@theblog.com</p>
+            <p className="text-gray-600 text-sm">We reply within 24hrs</p>
+          </div>
+        </div>
       </div>
     </main>
   );
