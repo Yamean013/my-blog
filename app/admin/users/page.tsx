@@ -13,6 +13,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   return (
@@ -34,14 +35,14 @@ export default function Page() {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4">
-          {Array.from({ length: 24 }).map((_, index) => (
-            <div
-              key={index}
-              className="aspect-video h-12 w-full rounded-lg bg-muted/50"
-            />
-          ))}
-        </div>
+        <section className="flex flex-1 flex-col gap-4 p-4">
+          <div className="flex justify-start">
+            <Button className="mx-2 mt-5 cursor-pointer">Add user</Button>
+            <Button className="hover:bg-red-500 transition-normal mx-2 mt-5 cursor-pointer">
+              Remove user
+            </Button>
+          </div>
+        </section>
       </SidebarInset>
     </SidebarProvider>
   );
