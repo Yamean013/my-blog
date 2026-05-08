@@ -1,20 +1,17 @@
-import { AppSidebar } from "@/components/app-sidebar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Separator } from "@/components/ui/separator";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
-import { Button } from "@/components/ui/button";
+import { columns, Payment } from "./columns"; // ← Payment stays here
+import { payments } from "./data"; // ← only the data array
+import { DataTable } from "./data-table";
 
-export default function Page() {
-  return <></>;
+async function getData(): Promise<Payment[]> {
+  return payments;
+}
+
+export default async function DemoPage() {
+  const data = await getData();
+
+  return (
+    <div className="container mx-auto py-10">
+      <DataTable columns={columns} data={data} />
+    </div>
+  );
 }
