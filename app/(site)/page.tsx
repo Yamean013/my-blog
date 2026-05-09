@@ -1,27 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { posts } from "@/lib/posts";
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardAction,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
@@ -54,14 +34,16 @@ export default function HomePage() {
             >
               <div className="shrink-0">
                 <Image
-                  src={post.url}
+                  src={post.imageUrl}
                   alt={post.title}
                   width={160}
                   height={120}
                   className="rounded-lg object-cover"
                 ></Image>
               </div>
-              <h2 className="text-2xl font-bold">{post.title}</h2>
+              <Link href={`/blog/${post.slug}`}>
+                <h2 className="text-2xl font-bold">{post.title}</h2>
+              </Link>
               <p className="text-xl">{post.content}</p>
 
               <div className="mt-6">

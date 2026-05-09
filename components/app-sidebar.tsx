@@ -62,21 +62,6 @@ const data = {
       url: "/admin/users",
       icon: <UsersIcon />,
     },
-    {
-      title: "Home",
-      url: "/",
-      icon: <House />,
-    },
-    {
-      title: "About",
-      url: "/about",
-      icon: <Info />,
-    },
-    {
-      title: "Contact",
-      url: "/contact",
-      icon: <PhoneForwarded />,
-    },
   ],
   navClouds: [
     {
@@ -143,6 +128,23 @@ const data = {
       icon: <SearchIcon />,
     },
   ],
+  documents: [
+    {
+      name: "Home",
+      url: "/",
+      icon: <House />,
+    },
+    {
+      name: "About",
+      url: "/about",
+      icon: <Info />,
+    },
+    {
+      name: "Contact",
+      url: "/contact",
+      icon: <PhoneForwarded />,
+    },
+  ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -165,7 +167,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        {/* <NavDocuments items={data.documents} /> */}
+        <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
