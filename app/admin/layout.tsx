@@ -4,6 +4,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { DataTable } from "./users/data-table";
 
 export default function AdminLayout({
   children,
@@ -21,7 +22,7 @@ export default function AdminLayout({
         }
       >
         <AppSidebar variant="inset" />
-        <SidebarInset></SidebarInset>
+        <SidebarInset>{children}</SidebarInset>
       </SidebarProvider>
     </>
   );
