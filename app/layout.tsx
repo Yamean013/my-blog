@@ -40,7 +40,7 @@ export default function RootLayout({
         spaceGrotesk.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body>
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
