@@ -1,11 +1,4 @@
-import {
-  Birdhouse,
-  Camera,
-  Hamburger,
-  HamIcon,
-  MenuIcon,
-  Search,
-} from "lucide-react";
+import { Birdhouse, Camera, MenuIcon, Search } from "lucide-react";
 import { Separator } from "./ui/separator";
 
 const Header = () => {
