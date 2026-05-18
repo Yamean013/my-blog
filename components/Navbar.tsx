@@ -12,8 +12,8 @@ const Navbar = () => {
   return (
     <div className="flex flex-col w-full">
       <Separator />
-      <NavigationMenu className="max-w-full w-full">
-        <NavigationMenuList className="flex-1 w-full justify-between">
+      <NavigationMenu className="max-w-full w-full p-2">
+        <NavigationMenuList className="flex-1 w-full justify-between gap-28">
           <NavigationMenuItem>Home</NavigationMenuItem>
           <NavigationMenuItem>New</NavigationMenuItem>
           <NavigationMenuItem>Top News</NavigationMenuItem>
